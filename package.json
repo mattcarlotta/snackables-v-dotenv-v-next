@@ -1,0 +1,26 @@
+{
+  "name": "snackables-v-dotenv-v-next",
+  "version": "0.0.1",
+  "description": "Snackables v Dot Env.",
+  "homepage": "https://github.com/mattcarlotta/snackables-v-dotenv-v-next",
+  "scripts": {
+    "dotenv": "node dotenv.js",
+    "gen": "node gen.js",
+    "next": "node next.js",
+    "snack": "node snackables.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:mattcarlotta/snackables-v-dotenv-v-next.git"
+  },
+  "author": "Matt Carlotta",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "snackables": "^0.0.21"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
