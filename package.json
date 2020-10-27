@@ -4,6 +4,7 @@
   "description": "Snackables v Dot Env.",
   "homepage": "https://github.com/mattcarlotta/snackables-v-dotenv-v-next",
   "scripts": {
+    "build": "node compress-next.js",
     "dotenv": "node dotenv.js",
     "gen": "node gen.js",
     "next": "node next.js",
@@ -18,9 +19,10 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
-    "snackables": "^0.0.22"
+    "snackables": "^0.0.25"
   },
   "devDependencies": {
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "terser": "^5.3.8"
   }
 }
