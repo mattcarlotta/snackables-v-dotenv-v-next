@@ -19,7 +19,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
-    "snackables": "^0.0.25"
+    "snackables": "^0.0.27"
   },
   "devDependencies": {
     "prettier": "^2.1.2",
