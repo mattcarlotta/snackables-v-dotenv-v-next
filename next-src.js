@@ -37,17 +37,18 @@ function processEnv(loadedEnvFiles, dir) {
   return Object.assign(process.env, parsed);
 }
 
-module.exports.loadEnvConfig = function loadEnvConfig(dir = "") {
+module.exports.loadEnvConfig = function loadEnvConfig(dir = "", paths = []) {
   const dotenvFiles = [
     `.env.development.local`,
     `.env.local`,
     `.env.development`,
     ".env"
   ].filter(Boolean);
+  const configPaths = paths.length ? paths : dotenvFiles;
 
-  let cachedLoadedEnvFiles = [];
+  const cachedLoadedEnvFiles = [];
 
-  for (const envFile of dotenvFiles) {
+  for (const envFile of configPaths) {
     // only load .env if the user provided has an env config file
     const dotEnvPath = path.join(dir, envFile);
 

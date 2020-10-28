@@ -8,7 +8,7 @@
     "dotenv": "node dotenv.js",
     "gen": "node gen.js",
     "next": "node next.js",
-    "snack": "node snackables.js"
+    "snackables": "node snackables.js"
   },
   "repository": {
     "type": "git",
