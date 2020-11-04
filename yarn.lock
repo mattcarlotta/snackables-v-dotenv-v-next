@@ -27,10 +27,10 @@ prettier@^2.1.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
   integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
-snackables@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/snackables/-/snackables-1.0.2.tgz#3ff995f0977852954e8b0115b985751aa3a550fe"
-  integrity sha512-F7yjylCdtvvcBglYLe7P0cNK3AmY2pH+gca8uE5dB9462kYcur95wWbbcvoECw5fdRStc0WzattIgVVlfw+sgw==
+snackables@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/snackables/-/snackables-1.0.4.tgz#10465869fe4064789f2400492a0298c21336df5b"
+  integrity sha512-MjV2Wtd/n1DvKLgqkQdzDhPgfI5h4MBDBJEHZlnAi3RBBTxc7xOVou59RGp6DK7gKJfapn8YIDx6pJkF1WgIjA==
 
 source-map-support@~0.5.19:
   version "0.5.19"
