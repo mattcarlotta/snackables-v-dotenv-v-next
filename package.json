@@ -20,7 +20,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
-    "snackables": "^1.0.4",
+    "snackables": "^2.0.0",
     "snackables-next": "^1.0.1"
   },
   "devDependencies": {

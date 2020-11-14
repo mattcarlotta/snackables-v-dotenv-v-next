@@ -11,7 +11,7 @@ console.timeEnd("Test");
 // loading interpolated ".env" like dotenv+dotenv-expand
 // console.time("Test");
 // for (let i = 0; i < 5000; i += 1) {
-//   snackables.config({ path: [".env.interp"] });
+//   snackables.config({ paths: [".env.interp"] });
 //   console.log("iteration", i + 1);
 // }
 // console.timeEnd("Test");
@@ -20,7 +20,7 @@ console.timeEnd("Test");
 // console.time("Test");
 // for (let i = 0; i < 500000; i += 1) {
 //   snackables.config({
-//     path: [".env", ".env.development", ".env.local", ".env.development.local"]
+//     paths: [".env", ".env.development", ".env.local", ".env.development.local"]
 //   });
 //   console.log("iteration", i + 1);
 // }
