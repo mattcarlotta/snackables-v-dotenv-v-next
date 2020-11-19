@@ -27,10 +27,10 @@ prettier@^2.1.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
   integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
-snackables-next@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/snackables-next/-/snackables-next-1.1.0.tgz#b189c9c6ebb444fa8f17191886c5d8eb9692dd44"
-  integrity sha512-blhjxcS1yuRPjhI5VxuDiCSFhaIYIZOTsGkP+fd51Os426Ijl2VOGB20vJ/uCBjUTBP9MARFOUcZH5ZG8jMs9Q==
+snackables-next@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/snackables-next/-/snackables-next-1.1.1.tgz#cfe586e0b84be801fbf6e1224be9f44289f3069b"
+  integrity sha512-gpzirh9RFLfnHmQG8u6ijq5R9wb/pl1TaIN/rD4f4AQXAJwktSjFczLaVb89EOjQTi66ZXetv/hfXP38fJ8hig==
 
 snackables@^2.1.0:
   version "2.1.0"
