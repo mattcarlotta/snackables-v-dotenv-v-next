@@ -27,15 +27,15 @@ prettier@^2.1.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
   integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
-snackables-next@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/snackables-next/-/snackables-next-1.0.1.tgz#8cadc26c9c37028b48cf465239537c665d410887"
-  integrity sha512-Hi1oca2oTH6mNm9buiEbf2SRLCMu3uqxff0tyqO3pIxP/8gheZGcqbY49YhtJyHSreT3+BlZMI7LMyutvY5kYA==
+snackables-next@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/snackables-next/-/snackables-next-1.1.0.tgz#b189c9c6ebb444fa8f17191886c5d8eb9692dd44"
+  integrity sha512-blhjxcS1yuRPjhI5VxuDiCSFhaIYIZOTsGkP+fd51Os426Ijl2VOGB20vJ/uCBjUTBP9MARFOUcZH5ZG8jMs9Q==
 
-snackables@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/snackables/-/snackables-2.0.3.tgz#05f1fd33ef2be82c6de23ff612472b98878e3868"
-  integrity sha512-iWlgubTO2ZL76xVEf/XiyFDp1/gYOzllsuN4hRaxU7mJbMnLeNxG+lZvrhY+P3pjEjW+x68DRE2s+cYCVECTLA==
+snackables@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/snackables/-/snackables-2.1.0.tgz#ce6e8f58e9806820a2afa448872a53f9bedc024c"
+  integrity sha512-FVlU7n9+BED77N2D5C2LG711PVb9LaEMiTq9acE13c3s3OQ+i1nL10XfSfkQYC7vJJBmG5+XgCJ7w7l5ulNgIg==
 
 source-map-support@~0.5.19:
   version "0.5.19"
