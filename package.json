@@ -18,13 +18,13 @@
   "author": "Matt Carlotta",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "snackables": "^2.1.0",
     "snackables-next": "^1.1.1"
   },
   "devDependencies": {
-    "prettier": "^2.1.2",
-    "terser": "^5.3.8"
+    "prettier": "^2.3.0",
+    "terser": "^5.7.0"
   }
 }
