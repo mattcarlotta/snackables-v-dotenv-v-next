@@ -32,10 +32,10 @@ snackables-next@^1.1.1:
   resolved "https://registry.yarnpkg.com/snackables-next/-/snackables-next-1.1.1.tgz#cfe586e0b84be801fbf6e1224be9f44289f3069b"
   integrity sha512-gpzirh9RFLfnHmQG8u6ijq5R9wb/pl1TaIN/rD4f4AQXAJwktSjFczLaVb89EOjQTi66ZXetv/hfXP38fJ8hig==
 
-snackables@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/snackables/-/snackables-3.0.8.tgz#f56b4ad3fd7bf01c23500a559d779cd858727b9a"
-  integrity sha512-O1eNILDPSc8FY/02lo7/jcaXjvOJD72erYmaXiNk2z8Soe9EESl9A8afo5+95QzGNXS1ieF7XehZ5oQQjORBbg==
+snackables@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/snackables/-/snackables-3.0.10.tgz#d75f2a05d45ddcd29c3ee5b8f4fd8dda77c52704"
+  integrity sha512-uqweSWG48YP7IuXVJDcujBRpHyIOzgFrmEZsIJaGEAV0hIJ/Y6pkawW4181e/l1jUPLtRnHnh6LVihLX/OrDKg==
 
 source-map-support@~0.5.19:
   version "0.5.19"
