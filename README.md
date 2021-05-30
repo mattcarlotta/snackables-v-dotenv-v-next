@@ -13,6 +13,15 @@ Run tests by editing the test file and running the following commands:
 
 ## Metrics
 
+System Specs:
+
+- CPU: AMD Ryzen 9 5950x (stock)
+- MOBO: Asus x570 ROG Crosshair VIII Hero (WI-FI)
+- RAM: G.Skill Trident Z Neo 32 GB (4 x 8 GB) running @ 3600Mhz
+- Storage: Sabrent 1TB Rocket 4 Plus NVMe 4.0 Gen4
+- OS: Linuxmint 20.1 ulyssa
+- Kernel: Linux 5.8.0-53-generic x86_64
+
 Last run: 05/29/2021
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
