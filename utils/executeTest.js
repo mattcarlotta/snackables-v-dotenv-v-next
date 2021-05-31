@@ -11,7 +11,7 @@ const executeTest = fn => {
 
   for (let i = 1; i <= runs; i += 1) {
     const startDate = createDate();
-    fn(num => console.log(`iteration \x1b[33m${num + 1}\x1b[0m`));
+    fn(num => console.log(`iteration \x1b[33m${num + 1} (run: ${i})\x1b[0m`));
     iterations.push(getSecondsDifference(startDate));
   }
 

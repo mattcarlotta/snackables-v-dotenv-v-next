@@ -1,19 +1,22 @@
-# Snackables v Snackables-Next v. Dotenv/Dotenv-Expand v Next performance
+# Snackables vs. Dotenv/Dotenv-Expand vs. Next performance
 
 ## Commands
 
-Run tests by editing the test file and running the following commands:
+Run individual tests by running the following commands:
 
-| `yarn <command>` | Description                                                   |
-| ---------------- | ------------------------------------------------------------- |
-| `dotenv`         | Runs tests for `dotenv` + `dotenv-expand` (`dotenv.js` file). |
-| `next`           | Runs tests for `next` (`next.js` file).                       |
-| `snack`          | Runs tests for `snackables` (`snack.js` file).                |
-| `snacknext`      | Runs tests for `snackables-next` (`snacknext.js` file).       |
+| `yarn <command>` | Description                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| `dotenv`         | Runs tests for `dotenv` + `dotenv-expand` (outputs results to `results.json` file as `dotenv`). |
+| `next`           | Runs tests for `next` (outputs results to `results.json` file as `next`).                       |
+| `snack`          | Runs tests for `snackables` (outputs results to `results.json` file as `snackables`).           |
+| `readme`         | Generates a `README.md` from the `results.json` file.                                           |
+| `run`            | Runs all tests and generates a `results.json` file.                                             |
+⚠️ Warning: The tests can take a quite a long time to complete! Adjust the [iterations](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/iterationsConfig.js) or [runs](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/runsConfig.js) if needed.
+
 
 ## Metrics
 
-System Specs:
+**System Specs**:
 
 - CPU: AMD Ryzen 9 5950x (stock)
 - MOBO: Asus x570 ROG Crosshair VIII Hero (WI-FI)
@@ -22,25 +25,25 @@ System Specs:
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
 
-Last run: 05/29/2021
+**Compiled**: Monday, May 31, 2021 12:58 AM
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
-| package | type | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | default | 500,000 | 11.19s, 11.27s, 11.28s | 11.24s | 100% |
-| denv+denv-exp | default | 500,000 | 19.92s, 20.17s, 20.37s | 20.15s | 55.78% |
-| next | .env only | 500,000 | 84.19s, 84.49s, 84.68s | 84.45s | 13.30% |
+| snackables | Sunday, May 30, 2021 9:49 PM | 500000 | 11.039s, 11.124s, 11.189s | 11.117s | 100.00% |
+| dotenv | Sunday, May 30, 2021 10:01 PM | 500000 | 20.447s, 20.596s, 20.651s | 20.565s | 53.99% |
+| next | Monday, May 31, 2021 12:53 AM | 500000 | 87.319s | 29.106s | 12.64% |
 
 Loading and interpolating a single [large env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.interp):
-| package | type | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | .env.interp only | 5,000 | 19.99s, 20.14s, 20.17s | 20.10s | 100% |
-| denv+denv-exp | .env.interp only | 5,000 | 60.86s, 61.11s, 61.18s | 61.05s | 32.92% |
-| next | .env.interp only | 5,000 | 72.90s, 73.31s, 74.13s | 73.45s | 27.37% |
+| snackables | Sunday, May 30, 2021 9:50 PM | 5000 | 20.726s, 20.746s, 20.799s | 20.757s | 100.00% |
+| dotenv | Sunday, May 30, 2021 10:03 PM | 5000 | 66.892s, 66.935s, 67.02s | 66.949s | 30.98% |
+| next | Monday, May 31, 2021 12:57 AM | 5000 | 80.657s | 26.886s | 25.70% |
 
 Loading and interpolating multiple small env files ([1](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env), [2](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development), [3](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.local), [4](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development.local)):
-| package | type | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | .env, .env.development, .env.local, .env.development.local | 500,000 | 20.90s, 20.91s, 20.93s | 20.91s | 100% |
-| denv+denv-exp | .env, .env.development, .env.local, .env.development.local | 500,000 | 33.86s, 34.04s, 34.14s | 34.01s | 61.48% |
-| next | default (for development) | 500,000 | 100.69s, 101.67s, 101.91s | 101.42s | 20.62% |
+| snackables | Sunday, May 30, 2021 9:52 PM | 500000 | 20.493s, 20.755s, 20.771s | 20.673s | 522.28% |
+| dotenv | Sunday, May 30, 2021 10:10 PM | 500000 | 34.73s, 34.759s, 34.767s | 34.752s | 308.18% |
+| next | Monday, May 31, 2021 12:55 AM | 500000 | 107.031s | 35.677s | 100.00% |
