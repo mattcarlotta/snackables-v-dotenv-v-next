@@ -10,7 +10,8 @@
     "next": "node next.js",
     "readme": "node ./utils/generateREADME.js",
     "snack": "node snack.js",
-    "snacknext": "node snacknext.js"
+    "snacknext": "node snacknext.js",
+    "tests": "npm run snack && npm run dotenv && npm run next"
   },
   "repository": {
     "type": "git",

@@ -13,7 +13,7 @@ const tests = {
 let results = executeTest(logIteration => {
   for (let i = 0; i < iterations[0]; i += 1) {
     snackables.config();
-    logIteration(i);
+    logIteration(i, "snackables");
   }
 });
 tests.single = results;
@@ -22,7 +22,7 @@ tests.single = results;
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
     snackables.config({ paths: [".env.interp"] });
-    logIteration(i);
+    logIteration(i, "snackables");
   }
 });
 tests.interpolated = results;
@@ -38,7 +38,7 @@ results = executeTest(logIteration => {
         ".env.development.local"
       ]
     });
-    logIteration(i);
+    logIteration(i, "snackables");
   }
 });
 tests.multiple = results;

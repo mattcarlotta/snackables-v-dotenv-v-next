@@ -15,7 +15,7 @@ let results = executeTest(logIteration => {
   for (let i = 0; i < iterations[0]; i += 1) {
     const myEnv = dotenv.config();
     dotenvExpand(myEnv);
-    logIteration(i);
+    logIteration(i, "dotenv");
   }
 });
 tests.single = results;
@@ -25,7 +25,7 @@ results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
     const myEnv = dotenv.config({ path: ".env.interp" });
     dotenvExpand(myEnv);
-    logIteration(i);
+    logIteration(i, "dotenv");
   }
 });
 tests.interpolated = results;
@@ -37,7 +37,7 @@ results = executeTest(logIteration => {
     dotenvExpand(dotenv.config({ path: ".env.development" }));
     dotenvExpand(dotenv.config({ path: ".env.local" }));
     dotenvExpand(dotenv.config({ path: ".env.development.local" }));
-    logIteration(i);
+    logIteration(i, "dotenv");
   }
 });
 

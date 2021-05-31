@@ -13,7 +13,7 @@ const tests = {
 let results = executeTest(logIteration => {
   for (let i = 0; i < iterations[0]; i += 1) {
     loadEnvConfig(".", [".env"]);
-    logIteration(i);
+    logIteration(i, "next");
   }
 });
 tests.single = results;
@@ -22,7 +22,7 @@ tests.single = results;
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[2]; i += 1) {
     loadEnvConfig();
-    logIteration(i);
+    logIteration(i, "next");
   }
 });
 tests.multiple = results;
@@ -31,7 +31,7 @@ tests.multiple = results;
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
     loadEnvConfig(".", [".env.interp"]);
-    logIteration(i);
+    logIteration(i, "next");
   }
 });
 tests.interpolated = results;
