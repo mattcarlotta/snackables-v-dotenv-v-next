@@ -8,6 +8,7 @@
     "dotenv": "node dotenv.js",
     "gen": "node gen.js",
     "next": "node next.js",
+    "readme": "node generateREADME.js",
     "snack": "node snack.js",
     "snacknext": "node snacknext.js"
   },

@@ -1,9 +1,9 @@
 const dayjs = require("dayjs");
 
 const runs = 6;
-const iterations = [];
 
 const executeTest = fn => {
+  const iterations = [];
   const date = dayjs().format("dddd, MMMM D, YYYY h:mm A");
   for (let i = 1; i <= runs; i += 1) {
     const startDate = dayjs();
