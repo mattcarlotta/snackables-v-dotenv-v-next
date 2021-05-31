@@ -70,10 +70,10 @@ const addRowItem = item => `| ${item} `;
 
       await addResultsToTable("snackables", runs[i], i);
       await addResultsToTable("dotenv", runs[i], i);
-      // await addResultsToTable("next", runs[i], i);
+      await addResultsToTable("next", runs[i], i);
     }
 
-    createFile("README2.md", file);
+    createFile("README.md", file);
   } catch (error) {
     console.error(error);
     process.exit(1);
