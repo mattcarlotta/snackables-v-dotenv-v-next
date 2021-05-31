@@ -32,9 +32,9 @@ const addRowItem = item => `| ${item} `;
           if (!objectHasProperty(result, cfg))
             rej(`Unable to locate a '${cfg}' property within the results!`);
           const config = result[cfg];
-          const [fastestPackage] = Object.keys(results)
+          const [fastestPackage, x, y] = Object.keys(results)
             .map(package => results[package][cfg].fastest[0])
-            .sort();
+            .sort((a, b) => a - b);
 
           const package = addRowItem(pkg);
           const runDate = addRowItem(config.date);

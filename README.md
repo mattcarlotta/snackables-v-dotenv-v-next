@@ -10,7 +10,6 @@ Run individual tests by running the following commands:
 | `next`           | Runs tests for `next` (outputs results to `results.json` file as `next`).                       |
 | `snack`          | Runs tests for `snackables` (outputs results to `results.json` file as `snackables`).           |
 | `readme`         | Generates a `README.md` from the `results.json` file.                                           |
-| `run`            | Runs all tests and generates a `results.json` file.                                             |
 ⚠️ Warning: The tests can take a quite a long time to complete! Adjust the [iterations](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/iterationsConfig.js) or [runs](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/runsConfig.js) if needed.
 
 
@@ -25,25 +24,25 @@ Run individual tests by running the following commands:
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
 
-**Compiled**: Monday, May 31, 2021 12:58 AM
+**Compiled**: Monday, May 31, 2021 2:53 AM
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | Sunday, May 30, 2021 9:49 PM | 500000 | 11.039s, 11.124s, 11.189s | 11.117s | 100.00% |
-| dotenv | Sunday, May 30, 2021 10:01 PM | 500000 | 20.447s, 20.596s, 20.651s | 20.565s | 53.99% |
-| next | Monday, May 31, 2021 12:53 AM | 500000 | 87.319s | 29.106s | 12.64% |
+| snackables | Monday, May 31, 2021 1:10 AM | 500000 | 11.811s, 11.858s, 11.914s | 11.861s | 100.00% |
+| dotenv | Monday, May 31, 2021 1:16 AM | 500000 | 23.832s, 24.002s, 24.049s | 23.961s | 49.56% |
+| next | Monday, May 31, 2021 2:21 AM | 500000 | 87.893s, 88.298s, 89.483s | 88.558s | 13.44% |
 
 Loading and interpolating a single [large env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.interp):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | Sunday, May 30, 2021 9:50 PM | 5000 | 20.726s, 20.746s, 20.799s | 20.757s | 100.00% |
-| dotenv | Sunday, May 30, 2021 10:03 PM | 5000 | 66.892s, 66.935s, 67.02s | 66.949s | 30.98% |
-| next | Monday, May 31, 2021 12:57 AM | 5000 | 80.657s | 26.886s | 25.70% |
+| snackables | Monday, May 31, 2021 1:11 AM | 5000 | 20.172s, 20.229s, 20.248s | 20.216s | 100.00% |
+| dotenv | Monday, May 31, 2021 1:18 AM | 5000 | 70.851s, 70.853s, 70.975s | 70.893s | 28.47% |
+| next | Monday, May 31, 2021 2:41 AM | 5000 | 80.66s, 80.669s, 80.748s | 80.692s | 25.01% |
 
 Loading and interpolating multiple small env files ([1](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env), [2](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development), [3](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.local), [4](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development.local)):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
-| snackables | Sunday, May 30, 2021 9:52 PM | 500000 | 20.493s, 20.755s, 20.771s | 20.673s | 522.28% |
-| dotenv | Sunday, May 30, 2021 10:10 PM | 500000 | 34.73s, 34.759s, 34.767s | 34.752s | 308.18% |
-| next | Monday, May 31, 2021 12:55 AM | 500000 | 107.031s | 35.677s | 100.00% |
+| snackables | Monday, May 31, 2021 1:13 AM | 500000 | 21.848s, 21.865s, 21.87s | 21.861s | 100.00% |
+| dotenv | Monday, May 31, 2021 1:25 AM | 500000 | 39.816s, 40.063s, 40.128s | 40.002s | 54.87% |
+| next | Monday, May 31, 2021 2:30 AM | 500000 | 108.741s, 108.82s, 110.368s | 109.31s | 20.09% |
