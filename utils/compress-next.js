@@ -19,10 +19,11 @@ const options = {
 (async () => {
   try {
     const { code } = await minify(
-      fs.readFileSync("next-src.js", { encoding: "utf-8" }),
+      fs.readFileSync("./utils/next-src.js", { encoding: "utf-8" }),
       options
     );
-    if (code) fs.writeFileSync("next-env.js", code, { encoding: "utf-8" });
+    if (code)
+      fs.writeFileSync("./utils/next-env.js", code, { encoding: "utf-8" });
   } catch (error) {
     console.error(error);
     process.exit(1);

@@ -1,29 +1,46 @@
 const dotenv = require("dotenv");
 const dotenvExpand = require("dotenv-expand");
+const executeTest = require("./utils/executeTest");
+const writeResultToFile = require("./utils/writeResultToFile");
+const iterations = require("./config/iterationsConfig");
 
-console.time("Test");
+const tests = {
+  single: {},
+  interpolated: {},
+  multiple: {}
+};
 
 // default env loading
-for (let i = 0; i < 500000; i += 1) {
-  const myEnv = dotenv.config();
-  dotenvExpand(myEnv);
-  console.log("iteration", i + 1);
-}
+let results = executeTest(logIteration => {
+  for (let i = 0; i < iterations[0]; i += 1) {
+    const myEnv = dotenv.config();
+    dotenvExpand(myEnv);
+    logIteration(i);
+  }
+});
+tests.single = results;
 
 // large interpolated env loading
-// for (let i = 0; i < 5000; i += 1) {
-//   const myEnv = dotenv.config({ path: ".env.interp" });
-//   dotenvExpand(myEnv);
-//   console.log("iteration", i + 1);
-// }
+results = executeTest(logIteration => {
+  for (let i = 0; i < iterations[1]; i += 1) {
+    const myEnv = dotenv.config({ path: ".env.interp" });
+    dotenvExpand(myEnv);
+    logIteration(i);
+  }
+});
+tests.interpolated = results;
 
 // loading default next env files (.env, .env.development, .env.local, .env.development.local)
-// for (let i = 0; i < 500000; i += 1) {
-//   dotenvExpand(dotenv.config({ path: ".env" }));
-//   dotenvExpand(dotenv.config({ path: ".env.development" }));
-//   dotenvExpand(dotenv.config({ path: ".env.local" }));
-//   dotenvExpand(dotenv.config({ path: ".env.development.local" }));
-//   console.log("iteration", i + 1);
-// }
+results = executeTest(logIteration => {
+  for (let i = 0; i < 500000; i += 1) {
+    dotenvExpand(dotenv.config({ path: ".env" }));
+    dotenvExpand(dotenv.config({ path: ".env.development" }));
+    dotenvExpand(dotenv.config({ path: ".env.local" }));
+    dotenvExpand(dotenv.config({ path: ".env.development.local" }));
+    logIteration(i);
+  }
+});
 
-console.timeEnd("Test");
+tests.multiple = results;
+
+writeResultToFile({ dotenv: tests });

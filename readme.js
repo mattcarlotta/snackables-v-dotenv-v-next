@@ -1,4 +1,5 @@
-const head = `# Snackables v Snackables-Next v. Dotenv/Dotenv-Expand v Next performance
+const head =
+  compiled => `# Snackables v Snackables-Next v. Dotenv/Dotenv-Expand v Next performance
 
 ## Commands
 
@@ -21,6 +22,8 @@ System Specs:
 - Storage: Sabrent 1TB Rocket 4 Plus NVMe 4.0 Gen4
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
+
+Compiled: ${compiled}
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
 | package | date | iterations | duration (3 fastest runs out of 6) | avg | fastest |

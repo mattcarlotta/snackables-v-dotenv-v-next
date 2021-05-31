@@ -4,11 +4,11 @@
   "description": "Snackables v Dot Env.",
   "homepage": "https://github.com/mattcarlotta/snackables-v-dotenv-v-next",
   "scripts": {
-    "build": "node compress-next.js",
+    "build": "node ./utils/compress-next.js",
     "dotenv": "node dotenv.js",
-    "gen": "node gen.js",
+    "gen": "node ./utils/gen.js",
     "next": "node next.js",
-    "readme": "node generateREADME.js",
+    "readme": "node ./utils/generateREADME.js",
     "snack": "node snack.js",
     "snacknext": "node snacknext.js"
   },

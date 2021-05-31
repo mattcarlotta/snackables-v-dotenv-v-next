@@ -1,4 +1,4 @@
-const { loadEnvConfig } = require("./next-src");
+const { loadEnvConfig } = require("./utils/next-env");
 
 console.time("Test");
 // loading a default .env

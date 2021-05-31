@@ -1,7 +1,7 @@
 const snackables = require("snackables");
-const executeTest = require("./executeTest");
-const writeResultToFile = require("./writeResultToFile");
-const iterations = require("./iterationConfig");
+const executeTest = require("./utils/executeTest");
+const writeResultToFile = require("./utils/writeResultToFile");
+const iterations = require("./config/iterationsConfig");
 
 const tests = {
   single: {},
@@ -15,7 +15,7 @@ let results = executeTest(logIteration => {
     logIteration(i);
   }
 });
-tests.default = results;
+tests.single = results;
 
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
