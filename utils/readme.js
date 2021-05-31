@@ -11,6 +11,7 @@ Run individual tests by running the following commands:
 | \`next\`           | Runs tests for \`next\` (outputs results to \`results.json\` file as \`next\`).                       |
 | \`snack\`          | Runs tests for \`snackables\` (outputs results to \`results.json\` file as \`snackables\`).           |
 | \`readme\`         | Generates a \`README.md\` from the \`results.json\` file.                                           |
+
 ⚠️ Warning: The tests can take a quite a long time to complete! Adjust the [iterations](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/iterationsConfig.js) or [runs](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/runsConfig.js) if needed.
 
 
