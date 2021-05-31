@@ -1,20 +1,23 @@
 const head =
-  compiled => `# Snackables v Snackables-Next v. Dotenv/Dotenv-Expand v Next performance
+  compiled => `# Snackables vs. Dotenv/Dotenv-Expand vs. Next performance
 
 ## Commands
 
-Run tests by editing the test file and running the following commands:
+Run individual tests by running the following commands:
 
-| \`yarn <command>\` | Description                                                   |
-| ---------------- | ------------------------------------------------------------- |
-| \`dotenv\`         | Runs tests for \`dotenv\` + \`dotenv-expand\` (\`dotenv.js\` file). |
-| \`next\`           | Runs tests for \`next\` (\`next.js\` file).                       |
-| \`snack\`          | Runs tests for \`snackables\` (\`snack.js\` file).                |
-| \`snacknext\`      | Runs tests for \`snackables-next\` (\`snacknext.js\` file).       |
+| \`yarn <command>\` | Description                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| \`dotenv\`         | Runs tests for \`dotenv\` + \`dotenv-expand\` (outputs results to \`results.json\` file as \`dotenv\`). |
+| \`next\`           | Runs tests for \`next\` (outputs results to \`results.json\` file as \`next\`).                       |
+| \`snack\`          | Runs tests for \`snackables\` (outputs results to \`results.json\` file as \`snackables\`).           |
+| \`readme\`         | Generates a \`README.md\` from the \`results.json\` file.                                           |
+| \`run\`            | Runs all tests and generates a \`results.json\` file.                                             |
+⚠️ Warning: The tests can take a quite a long time to complete! Adjust the [iterations](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/iterationsConfig.js) or [runs](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/runsConfig.js) if needed.
+
 
 ## Metrics
 
-System Specs:
+**System Specs**:
 
 - CPU: AMD Ryzen 9 5950x (stock)
 - MOBO: Asus x570 ROG Crosshair VIII Hero (WI-FI)
@@ -23,7 +26,7 @@ System Specs:
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
 
-Compiled: ${compiled}
+**Compiled**: ${compiled}
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |

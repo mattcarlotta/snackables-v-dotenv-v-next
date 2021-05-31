@@ -6,7 +6,6 @@ const objectHasProperty = require("./objectHasProperty");
 const readme = require("./readme");
 const iterations = require("../config/iterationsConfig");
 
-const packages = ["snackables", "dotenv", "next"];
 const runs = ["single", "interpolated", "multiple"];
 const divider = "|";
 
@@ -73,18 +72,6 @@ const addRowItem = item => `| ${item} `;
       await addResultsToTable("dotenv", runs[i], i);
       // await addResultsToTable("next", runs[i], i);
     }
-
-    // //  await addResultsToTable(packages[2], runs[0], 0);
-
-    // file = file.concat(readme.singleLargeEnv);
-    // await addResultsToTable(packages[0], runs[1], 1);
-    // await addResultsToTable(packages[1], runs[1], 1);
-    // //  await addResultsToTable(packages[2], runs[1], 1);
-
-    // file = file.concat(readme.multiEnvs);
-    // await addResultsToTable(packages[0], runs[2], 2);
-    // await addResultsToTable(packages[1], runs[2], 2);
-    // //  await addResultsToTable(packages[2], runs[1], 1);
 
     createFile("README2.md", file);
   } catch (error) {
