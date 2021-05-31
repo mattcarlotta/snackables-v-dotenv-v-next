@@ -13,6 +13,7 @@ Run individual tests by running the following commands:
 
 ⚠️ Warning: The tests can take a quite a long time to complete! Adjust the [iterations](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/iterationsConfig.js) or [runs](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/config/runsConfig.js) if needed.
 
+
 ## Metrics
 
 **System Specs**:
@@ -24,7 +25,7 @@ Run individual tests by running the following commands:
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
 
-**Compiled**: Monday, May 31, 2021 2:53 AM
+**Compiled**: Monday, May 31, 2021 2:55 AM
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
