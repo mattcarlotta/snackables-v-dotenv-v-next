@@ -9,25 +9,25 @@ const tests = {
   multiple: {}
 };
 
-// loading a default .env
+// loading a single default .env
 let results = executeTest(logIteration => {
   for (let i = 0; i < iterations[0]; i += 1) {
     snackables.config();
-    logIteration(i);
+    logIteration(i, "snackablesnext", "single");
   }
 });
 tests.single = results;
 
-// large interpolated env loading
+// large interpolated .env loading
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
     snackables.config({ paths: [".env.interp"] });
-    logIteration(i);
+    logIteration(i, "snackablesnext", "interpolated");
   }
 });
 tests.interpolated = results;
 
-// loading default next env files (.env, .env.development, .env.local, .env.development.local)
+// loading default next .env files (.env, .env.development, .env.local, .env.development.local)
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[2]; i += 1) {
     snackables.config({
@@ -38,7 +38,7 @@ results = executeTest(logIteration => {
         ".env.development.local"
       ]
     });
-    logIteration(i);
+    logIteration(i, "snackablesnext", "multiple");
   }
 });
 tests.multiple = results;
