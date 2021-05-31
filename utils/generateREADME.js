@@ -65,19 +65,26 @@ const addRowItem = item => `| ${item} `;
       });
     };
 
-    await addResultsToTable(packages[0], runs[0], 0);
-    await addResultsToTable(packages[1], runs[0], 0);
-    //  await addResultsToTable(packages[2], runs[0], 0);
+    for (let i = 0; i < 3; i += 1) {
+      if (i === 1) file = file.concat(readme.singleLargeEnv);
+      if (i === 2) file = file.concat(readme.multiEnvs);
 
-    file = file.concat(readme.singleLargeEnv);
-    await addResultsToTable(packages[0], runs[1], 1);
-    await addResultsToTable(packages[1], runs[1], 1);
-    //  await addResultsToTable(packages[2], runs[1], 1);
+      await addResultsToTable("snackables", runs[i], i);
+      await addResultsToTable("dotenv", runs[i], i);
+      // await addResultsToTable("next", runs[i], i);
+    }
 
-    file = file.concat(readme.multiEnvs);
-    await addResultsToTable(packages[0], runs[2], 2);
-    await addResultsToTable(packages[1], runs[2], 2);
-    //  await addResultsToTable(packages[2], runs[1], 1);
+    // //  await addResultsToTable(packages[2], runs[0], 0);
+
+    // file = file.concat(readme.singleLargeEnv);
+    // await addResultsToTable(packages[0], runs[1], 1);
+    // await addResultsToTable(packages[1], runs[1], 1);
+    // //  await addResultsToTable(packages[2], runs[1], 1);
+
+    // file = file.concat(readme.multiEnvs);
+    // await addResultsToTable(packages[0], runs[2], 2);
+    // await addResultsToTable(packages[1], runs[2], 2);
+    // //  await addResultsToTable(packages[2], runs[1], 1);
 
     createFile("README2.md", file);
   } catch (error) {

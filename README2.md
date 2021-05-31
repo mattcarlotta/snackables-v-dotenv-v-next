@@ -22,7 +22,7 @@ System Specs:
 - OS: Linuxmint 20.1 ulyssa
 - Kernel: Linux 5.8.0-53-generic x86_64
 
-Compiled: Sunday, May 30, 2021 11:06 PM
+Compiled: Sunday, May 30, 2021 11:11 PM
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
 | package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
