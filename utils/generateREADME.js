@@ -1,12 +1,10 @@
-const { readFileSync } = require("fs");
 const { createDateWithFormat } = require("./createDate");
 const fileExists = require("./fileExists");
 const createFile = require("./createFile");
 const { filePath, readResultFile } = require("./resultPath");
 const objectHasProperty = require("./objectHasProperty");
+const readme = require("./readme");
 const iterations = require("../config/iterationsConfig");
-const readme = require("../readme");
-const { rejects } = require("assert");
 
 const packages = ["snackables", "dotenv", "next"];
 const runs = ["single", "interpolated", "multiple"];
@@ -35,6 +33,9 @@ const addRowItem = item => `| ${item} `;
           if (!objectHasProperty(result, cfg))
             rej(`Unable to locate a '${cfg}' property within the results!`);
           const config = result[cfg];
+          const [fastestPackage] = Object.keys(results)
+            .map(package => results[package][cfg].fastest[0])
+            .sort();
 
           const package = addRowItem(pkg);
           const runDate = addRowItem(config.date);
@@ -43,7 +44,9 @@ const addRowItem = item => `| ${item} `;
             config.fastest.map(i => `${i}s`).join(", ")
           );
           const avgIteration = addRowItem(`${config.avg}s`);
-          const fastestPackage = addRowItem("100%")
+          const comparePackageSpeed = addRowItem(
+            `${((fastestPackage / config.fastest[0]) * 100).toFixed(2)}%`
+          )
             .concat(divider)
             .concat("\n");
 
@@ -53,7 +56,7 @@ const addRowItem = item => `| ${item} `;
             numberOfIterations,
             fastestIterations,
             avgIteration,
-            fastestPackage
+            comparePackageSpeed
           );
           res();
         } catch (error) {
@@ -65,6 +68,16 @@ const addRowItem = item => `| ${item} `;
     await addResultsToTable(packages[0], runs[0], 0);
     await addResultsToTable(packages[1], runs[0], 0);
     //  await addResultsToTable(packages[2], runs[0], 0);
+
+    file = file.concat(readme.singleLargeEnv);
+    await addResultsToTable(packages[0], runs[1], 1);
+    await addResultsToTable(packages[1], runs[1], 1);
+    //  await addResultsToTable(packages[2], runs[1], 1);
+
+    file = file.concat(readme.multiEnvs);
+    await addResultsToTable(packages[0], runs[2], 2);
+    await addResultsToTable(packages[1], runs[2], 2);
+    //  await addResultsToTable(packages[2], runs[1], 1);
 
     createFile("README2.md", file);
   } catch (error) {

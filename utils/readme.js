@@ -26,19 +26,19 @@ System Specs:
 Compiled: ${compiled}
 
 Loading and interpolating a single [small env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env):
-| package | date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
 `;
 
 const singleLargeEnv = `
 Loading and interpolating a single [large env file](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.interp):
-| package | date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
 `;
 
 const multiEnvs = `
 Loading and interpolating multiple small env files ([1](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env), [2](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development), [3](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.local), [4](https://github.com/mattcarlotta/snackables-v-dotenv-v-next/blob/master/.env.development.local)):
-| package | date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
+| package | test date | iterations | duration (3 fastest runs out of 6) | avg | fastest |
 | --- | --- | --- | --- | --- | --- |
 `;
 

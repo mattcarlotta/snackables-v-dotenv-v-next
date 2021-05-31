@@ -9,6 +9,7 @@ const tests = {
   multiple: {}
 };
 
+// loading a default .env
 let results = executeTest(logIteration => {
   for (let i = 0; i < iterations[0]; i += 1) {
     snackables.config();
@@ -17,6 +18,7 @@ let results = executeTest(logIteration => {
 });
 tests.single = results;
 
+// large interpolated env loading
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[1]; i += 1) {
     snackables.config({ paths: [".env.interp"] });
@@ -25,6 +27,7 @@ results = executeTest(logIteration => {
 });
 tests.interpolated = results;
 
+// loading default next env files (.env, .env.development, .env.local, .env.development.local)
 results = executeTest(logIteration => {
   for (let i = 0; i < iterations[2]; i += 1) {
     snackables.config({

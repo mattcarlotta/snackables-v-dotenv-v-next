@@ -1,22 +1,39 @@
 const { loadEnvConfig } = require("./utils/next-env");
+const executeTest = require("./utils/executeTest");
+const writeResultToFile = require("./utils/writeResultToFile");
+const iterations = require("./config/iterationsConfig");
 
-console.time("Test");
+const tests = {
+  single: {},
+  interpolated: {},
+  multiple: {}
+};
+
 // loading a default .env
-for (let i = 0; i < 500000; i += 1) {
-  loadEnvConfig(".", [".env"]);
-  console.log("iteration", i + 1);
-}
+let results = executeTest(logIteration => {
+  for (let i = 0; i < iterations[0]; i += 1) {
+    loadEnvConfig(".", [".env"]);
+    logIteration(i);
+  }
+});
+tests.single = results;
 
-// loading a large interpolated env loading
-// for (let i = 0; i < 5000; i += 1) {
-//   loadEnvConfig(".", [".env.interp"]);
-//   console.log("iteration", i + 1);
-// }
+// large interpolated env loading
+results = executeTest(logIteration => {
+  for (let i = 0; i < iterations[1]; i += 1) {
+    loadEnvConfig(".", [".env.interp"]);
+    logIteration(i);
+  }
+});
+tests.interpolated = results;
 
 // loading default next env files (.env, .env.development, .env.local, .env.development.local)
-// for (let i = 0; i < 500000; i += 1) {
-//   loadEnvConfig();
-//   console.log("iteration", i + 1);
-// }
+results = executeTest(logIteration => {
+  for (let i = 0; i < iterations[2]; i += 1) {
+    loadEnvConfig();
+    logIteration(i);
+  }
+});
+tests.multiple = results;
 
-console.timeEnd("Test");
+writeResultToFile({ next: tests });
