@@ -1,25 +1,44 @@
 const snackables = require("snackables");
+const executeTest = require("./executeTest");
+const writeResultToFile = require("./writeResultToFile");
 
-console.time("Test");
+// const runs = 6;
+const tests = {
+  default: {},
+  interpolated: {},
+  multiple: {}
+};
 
-// loading default ".env" like dotenv
-for (let i = 0; i < 500000; i += 1) {
-  snackables.config();
-  console.log("iteration", i + 1);
-}
+let results = executeTest(logIteration => {
+  for (let i = 0; i < 500000; i += 1) {
+    snackables.config();
+    logIteration(i);
+  }
+});
+tests.default = results;
 
-// loading interpolated ".env" like dotenv+dotenv-expand
-// for (let i = 0; i < 5000; i += 1) {
-//   snackables.config({ paths: [".env.interp"] });
-//   console.log("iteration", i + 1);
-// }
+writeResultToFile(tests);
 
-// loading default next env files (.env, .env.development, .env.local, .env.development.local)
-// for (let i = 0; i < 500000; i += 1) {
-//   snackables.config({
-//     paths: [".env", ".env.development", ".env.local", ".env.development.local"]
-//   });
-//   console.log("iteration", i + 1);
-// }
+// console.log("🚀 ~ file: snack.js ~ line 10 ~ tests", tests);
+// results = executeTest(logIteration => {
+//   for (let i = 0; i < 5000; i += 1) {
+//     snackables.config({ paths: [".env.interp"] });
+//     logIteration(i);
+//   }
+// });
+// tests.interpolated = results;
 
-console.timeEnd("Test");
+// results = executeTest(logIteration => {
+//   for (let i = 0; i < 500000; i += 1) {
+//     snackables.config({
+//       paths: [
+//         ".env",
+//         ".env.development",
+//         ".env.local",
+//         ".env.development.local"
+//       ]
+//     });
+//     logIteration(i);
+//   }
+// });
+// tests.multiple = results;
